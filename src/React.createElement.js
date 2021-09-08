@@ -53,3 +53,5 @@ function render(element, container) {
   // 4. 将 DOM 节点添加至 root 根节点
   container.appendChild(dom);
 }
+
+// 至此，我们已经完成了一个简版 React 的实现，包括了 React 如何将 JSX 元素转换成我们熟知的虚拟 DOM 结构；Fiber 架构是如何实现优化拆分工作单元、实现异步可中断机制的；以及如何将一个 Fiber 树进行进行遍历、提交至页面进行渲染的。

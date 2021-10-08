@@ -8,6 +8,7 @@ function deepClone(obj) {
 
   let isArray = Array.isArray(obj);
   let newObj = isArray ? [...obj] : { ...obj };
+  console.log(newObj)
 
   Reflect.ownKeys(newObj).forEach((key) => {
     newObj[key] = isObject(obj[key]) ? deepClone(obj[key]) : obj[key];

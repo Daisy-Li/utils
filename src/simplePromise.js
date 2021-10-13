@@ -50,3 +50,17 @@ MyPromise.prototype.then = function(onFulfilled,onRejected) {
     onRejected(that.value);
   }
 }
+
+Promise.all = function(promises) {
+  let result = []
+  return new Promise((resolve,reject) => {
+    promises.forEach((val,index) => {
+        val.then(function(res) {
+          result[index] = res
+        })
+        if(result.length = promises.length) {
+          return resolve(result)
+        }
+    });
+  })
+}
